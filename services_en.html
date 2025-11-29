@@ -276,12 +276,17 @@ function closePopup() {
 }
 
 function scrollToContact() {
+    const form = document.getElementById("contact-form");
+    const headerHeight = document.querySelector("header").offsetHeight;
+
     window.scrollTo({
-        top: document.querySelector("#contact-form").offsetTop - 120,
+        top: form.getBoundingClientRect().top + window.scrollY - (headerHeight + 20),
         behavior: "smooth"
     });
+
     closePopup();
 }
+
 </script>
 
 </body>
