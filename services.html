@@ -3,219 +3,284 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <script>
-        (function(){
-            try{
-                var t = localStorage.getItem('theme');
-                if (t === 'dark' || t === 'true' || t === '1') {
-                    document.documentElement.setAttribute('data-theme','dark');
-                } else {
-                    document.documentElement.removeAttribute('data-theme');
-                }
-            } catch(e){}
-        })();
-    </script>
-    <link rel="stylesheet" href="style.css">
   <title>Mes Services - Gabriel</title>
+
+  <script>
+    (function(){
+        try{
+            var t = localStorage.getItem('theme');
+            if (t === 'dark' || t === 'true' || t === '1') {
+                document.documentElement.setAttribute('data-theme','dark');
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+            }
+        } catch(e){}
+    })();
+  </script>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    
-    <div class="particles-container">
-        <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
-        <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
-        <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
-        <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
-        <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
-        <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
-        <div class="particle"></div><div class="particle"></div>
+
+<div class="particles-container">
+    <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+    <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+    <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+    <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+    <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+    <div class="particle"></div><div class="particle"></div>
+</div>
+
+<div id="contenu-principal">
+
+    <!-- 🔥 Bandeau promo -->
+    <div class="promo-under-header">
+        🎉 Offre premiers clients : Vous ne payez que le nom de domaine + l’hébergement !
     </div>
 
-    <div id="contenu-principal">
-        <header>
-            <h1 class="logo">Gabriel</h1>
-            <div class="header-center">
-                <div class="menu-deroulant">
-                    <button class="btn-sommaire">Sommaire ▾</button>
-                    <nav class="nav-content">
-                        <ul>
-                            <li><a href="parcours.html">Mon parcours</a></li>
-                            <li><a href="experience.html">Expériences professionnelles</a></li>
-                            <li><a href="formations.html">Mes études</a></li>
-                            <li><a href="projets.html">Projets</a></li>
-                            <li><a href="services.html">Mes services</a></li>
-                            <li><a href="index.html">Accueil</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-            <div class="header-right">
-                <a class="download-cv" href="lm 15.pdf" target="_blank">Télécharger le CV</a>
-                <div style="display:flex; align-items:center; gap:12px;">
-                  <a href="services_en.html" class="lang-link" style="color:var(--text-color); text-decoration:none; font-weight:600;">EN</a>
-                  <label class="switch">
-                      <input type="checkbox" id="theme-switch">
-                      <span class="slider">
-                          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                              <path d="M12 3a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V4a1 1 0 0 1 1-1zm0 15a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1zm9-7a1 1 0 0 1-1 1h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1zM4 12a1 1 0 0 1-1 1H2a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1zm15.7-7.7a1 1 0 0 1 0 1.4l-1 1a1 1 0 0 1-1.4-1.4l1-1a1 1 0 0 1 1.4 0zM6.7 19.7a1 1 0 0 1-1.4-1.4l1-1a1 1 0 0 1 1.4 1.4l-1 1zm12.6 0l-1-1a1 1 0 0 1 1.4-1.4l1 1a1 1 0 0 1-1.4 1.4zM6.7 4.3l1 1a1 1 0 0 1-1.4 1.4l-1-1a1 1 0 0 1 1.4-1.4zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10z"/>
-                          </svg>
-                          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                              <path d="M12.1 22c-4.9 0-9.1-3.8-9.1-8.5s4.2-8.5 9.1-8.5c.6 0 1.2.1 1.8.2C11.6 6 10 8.9 10 12.2c0 4.7 4.2 8.5 9.1 8.5h.3c-2 .8-4.2 1.3-6.5 1.3h-.8z"/>
-                          </svg>
-                      </span>
-                  </label>
-                </div>
-            </div>
-        </header>
-        
-        <main>
-            <section class="section">
-                <h2>Mes Services 🚀</h2>
-                <p style="margin-bottom: 30px; font-size: 1.1rem; color: var(--text-color); opacity: 0.9;">
-                    Je propose des services de création web sur mesure, adaptés à vos besoins et vos objectifs.
-                </p>
-                
-                <div class="services-grid">
-
-                    <div class="service-card">
-                        <div class="service-icon">🌐</div>
-                        <h3>Site Vitrine</h3>
-                        <p>Présentez votre entreprise avec un site moderne et professionnel.</p>
-                        <ul class="service-features">
-                            <li>✓ Design moderne</li>
-                            <li>✓ Responsive</li>
-                            <li>✓ Formulaire de contact</li>
-                            <li>✓ Pages personnalisées</li>
-                        </ul>
-                        <div class="service-price">À partir de 100€</div>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-icon">🎨</div>
-                        <h3>Refonte / Redesign</h3>
-                        <p>Modernisez votre site existant et améliorez ses performances.</p>
-                        <ul class="service-features">
-                            <li>✓ Analyse du site actuel</li>
-                            <li>✓ Nouveau design moderne</li>
-                            <li>✓ Optimisation</li>
-                            <li>✓ Migration sécurisée</li>
-                        </ul>
-                        <div class="service-price">À partir de 150€</div>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-icon">🗄️</div>
-                        <h3>Site Complet & Base de Données</h3>
-                        <p>Site dynamique, sécurisé, avec espace utilisateur et panel admin.</p>
-                        <ul class="service-features">
-                            <li>✓ Back-end sécurisé</li>
-                            <li>✓ Base de données SQL</li>
-                            <li>✓ Authentification</li>
-                            <li>✓ Panel administrateur</li>
-                            <li>✓ API personnalisée</li>
-                        </ul>
-                        <div class="service-price">À partir de 500€</div>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-icon">🔧</div>
-                        <h3>Maintenance & Support</h3>
-                        <p>Assurez le suivi, la sécurité et les mises à jour de votre site.</p>
-                        <ul class="service-features">
-                            <li>✓ Mises à jour</li>
-                            <li>✓ Sauvegardes</li>
-                            <li>✓ Support technique</li>
-                            <li>✓ Surveillance du site</li>
-                        </ul>
-                        <div class="service-price">À partir de 25€/mois</div>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-icon">📊</div>
-                        <h3>Optimisation & Analytics</h3>
-                        <p>Boostez la visibilité et la vitesse de votre site.</p>
-                        <ul class="service-features">
-                            <li>✓ SEO</li>
-                            <li>✓ Analyse du trafic</li>
-                            <li>✓ Rapports</li>
-                            <li>✓ Recommandations</li>
-                        </ul>
-                        <div class="service-price">À partir de 300€</div>
-                    </div>
-
-                </div>
-            </section>
-
-            <section class="section">
-                <h2>Clients satisfaits 👥</h2>
-                    <div class="client-card">
-                        <div class="client-logo">🧀</div>
-                        <h3>Goût et Fraîcheur</h3>
-                        <p class="client-description">Fromagerie</p>
-                        <p class="client-feedback">"Service rapide, clair et super pro."</p>
-                        <div class="client-rating">⭐⭐⭐⭐</div>
-                    </div>
-            </section>
-
-            <div class="quote-section">
-                <div class="animated-quote">
-                    <span class="quote-text">"Votre succès en ligne commence ici"</span>
-                </div>
-            </div>
-
-            <section class="section">
-                <h2>Commencer votre Projet 📬</h2>
-                <p style="margin-bottom: 30px; text-align: center; opacity: 0.9;">Contactez-moi pour un devis sur-mesure.</p>
-                
-                <form id="contact-form" class="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Votre nom" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Votre email" required>
-                    </div>
-                    <div class="form-group">
-                        <select id="service" name="service" required style="width: 100%; padding: 16px 20px; border: 2px solid var(--border-color); border-radius: 12px; background: var(--card-bg); color: var(--text-color); font-size: 1rem;">
-                            <option value="">Sélectionnez un service</option>
-                            <option value="site-vitrine">Site Vitrine</option>
-                            <option value="site-complet">Site Complet & Base de Données</option>
-                            <option value="refonte">Refonte / Redesign</option>
-                            <option value="maintenance">Maintenance & Support</option>
-                            <option value="optimisation">Optimisation & Analytics</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Décrivez votre projet" required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" class="submit-btn">Demander un Devis</button>
-                    </div>
-                </form>
-
-                <p id="status"></p>
-            </section>
-        </main>
-    </div>
-
-    
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="social-links">
-                <a href="https://linkedin.com/in/gabriel-durand-touya-182ab3349/" target="_blank" class="social-link">LinkedIn</a>
-                <a href="https://github.com/gabrieldrdt" target="_blank" class="social-link">GitHub</a>
-            </div>
-            <div class="footer-text">
-                <p>&copy; 2025 Gabriel. Tous droits réservés.</p>
-                <p class="footer-subtitle">Développeur web passionné</p>
-                <p><button id="reset-theme" class="reset-theme">Réinitialiser le thème</button></p>
+    <header>
+        <h1 class="logo">Gabriel</h1>
+        <div class="header-center">
+            <div class="menu-deroulant">
+                <button class="btn-sommaire">Sommaire ▾</button>
+                <nav class="nav-content">
+                    <ul>
+                        <li><a href="parcours.html">Mon parcours</a></li>
+                        <li><a href="experience.html">Expériences professionnelles</a></li>
+                        <li><a href="formations.html">Mes études</a></li>
+                        <li><a href="projets.html">Projets</a></li>
+                        <li><a href="services.html">Mes services</a></li>
+                        <li><a href="index.html">Accueil</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
-    </footer>
 
-    <button class="scroll-to-top" id="scrollToTop">↑</button>
+        <div class="header-right">
+            <a class="download-cv" href="lm 15.pdf" target="_blank">Télécharger le CV</a>
+            <a href="services_en.html" class="lang-link" style="color:var(--text-color); font-weight:600;">EN</a>
 
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="script.js"></script>
+            <label class="switch">
+                <input type="checkbox" id="theme-switch">
+                <span class="slider">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12 3a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V4a1 1 0 0 1 1-1zm0 15a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1zm9-7a1 1 0 0 1-1 1h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1zM4 12a1 1 0 0 1-1 1H2a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1zm15.7-7.7a1 1 0 0 1 0 1.4l-1 1a1 1 0 0 1-1.4-1.4l1-1a1 1 0 0 1 1.4 0zM6.7 19.7a1 1 0 0 1-1.4-1.4l1-1a1 1 0 0 1 1.4 1.4l-1 1zm12.6 0l-1-1a1 1 0 0 1 1.4-1.4l1 1a1 1 0 0 1-1.4 1.4zM6.7 4.3l1 1a1 1 0 0 1-1.4 1.4l-1-1a1 1 0 0 1 1.4-1.4zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10z"/>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24">
+                        <path d="M12.1 22c-4.9 0-9.1-3.8-9.1-8.5s4.2-8.5 9.1-8.5c.6 0 1.2.1 1.8.2C11.6 6 10 8.9 10 12.2c0 4.7 4.2 8.5 9.1 8.5h.3c-2 .8-4.2 1.3-6.5 1.3h-.8z"/>
+                    </svg>
+                </span>
+            </label>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <h2>Mes Services 🚀</h2>
+            <p style="opacity:0.9;">Sites vitrine, refonte, bases de données, SEO, maintenance :</p>
+
+            <div class="services-grid">
+
+                <!-- SITE VITRINE -->
+                <div class="service-card">
+                    <div class="service-icon">🌐</div>
+                    <h3>Site Vitrine</h3>
+                    <p>Présentez votre activité avec un site moderne.</p>
+                    <ul class="service-features">
+                        <li>✓ Design moderne</li>
+                        <li>✓ Responsive</li>
+                        <li>✓ Pages personnalisées</li>
+                        <li>✓ Formulaire de contact</li>
+                    </ul>
+                    <button class="service-price" data-offer="vitrine">À partir de 100€</button>
+                </div>
+
+                <!-- REFONTE -->
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Refonte / Redesign</h3>
+                    <p>Modernisez votre site existant.</p>
+                    <ul class="service-features">
+                        <li>✓ Analyse du site actuel</li>
+                        <li>✓ Nouveau design moderne</li>
+                        <li>✓ Optimisation</li>
+                        <li>✓ Migration sécurisée</li>
+                    </ul>
+                    <button class="service-price" data-offer="refonte">À partir de 150€</button>
+                </div>
+
+                <!-- SITE COMPLET BD -->
+                <div class="service-card">
+                    <div class="service-icon">🗄️</div>
+                    <h3>Site Complet & Base de Données</h3>
+                    <p>Site dynamique, sécurisé, avec comptes utilisateurs.</p>
+                    <ul class="service-features">
+                        <li>✓ Back-end sécurisé</li>
+                        <li>✓ Base SQL</li>
+                        <li>✓ Login / espace membre</li>
+                        <li>✓ Panel administrateur</li>
+                        <li>✓ API personnalisée</li>
+                    </ul>
+                    <button class="service-price" data-offer="complet">À partir de 500€</button>
+                </div>
+
+                <!-- MAINTENANCE -->
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Maintenance & Support</h3>
+                    <p>Gardez votre site sécurisé et fonctionnel.</p>
+                    <ul class="service-features">
+                        <li>✓ Mises à jour</li>
+                        <li>✓ Sauvegardes</li>
+                        <li>✓ Support technique</li>
+                        <li>✓ Monitoring</li>
+                    </ul>
+                    <button class="service-price" data-offer="maintenance">À partir de 25€/mois</button>
+                </div>
+
+                <!-- OPTIMISATION -->
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>Optimisation & Analytics</h3>
+                    <p>Boostez votre visibilité.</p>
+                    <ul class="service-features">
+                        <li>✓ SEO</li>
+                        <li>✓ Analyse du trafic</li>
+                        <li>✓ Rapports</li>
+                        <li>✓ Recommandations</li>
+                    </ul>
+                    <button class="service-price" data-offer="seo">À partir de 300€</button>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Clients satisfaits 👥</h2>
+
+            <div class="client-card">
+                <div class="client-logo">🧀</div>
+                <h3>Goût et Fraîcheur</h3>
+                <p class="client-description">Fromagerie</p>
+                <p class="client-feedback">"Service rapide, clair et super pro."</p>
+                <div class="client-rating">⭐⭐⭐⭐</div>
+            </div>
+        </section>
+
+        <div class="quote-section">
+            <div class="animated-quote">
+                <span class="quote-text">"Votre succès en ligne commence ici"</span>
+            </div>
+        </div>
+
+        <!-- CONTACT -->
+        <section class="section">
+            <h2>Commencer votre Projet 📬</h2>
+            <p style="text-align:center; opacity:0.9;">Contactez-moi pour un devis sur-mesure.</p>
+
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Votre email" required>
+                </div>
+
+                <div class="form-group">
+                    <select id="service" name="service" required>
+                        <option value="">Sélectionnez un service</option>
+                        <option value="site-vitrine">Site Vitrine</option>
+                        <option value="site-complet">Site Complet & Base de Données</option>
+                        <option value="refonte">Refonte / Redesign</option>
+                        <option value="maintenance">Maintenance & Support</option>
+                        <option value="optimisation">Optimisation & Analytics</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder="Décrivez votre projet" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Demander un Devis</button>
+            </form>
+
+            <p id="status"></p>
+        </section>
+
+    </main>
+</div>
+
+<!-- POPUP -->
+<div class="popup-overlay" id="popup">
+    <div class="popup-card">
+        <button class="popup-close" onclick="closePopup()">✖</button>
+        <h3 id="popup-title"></h3>
+        <p id="popup-content"></p>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="social-links">
+            <a href="https://linkedin.com/in/gabriel-durand-touya-182ab3349/" target="_blank" class="social-link">LinkedIn</a>
+            <a href="https://github.com/gabrieldrdt" target="_blank" class="social-link">GitHub</a>
+        </div>
+        <div class="footer-text">
+            <p>&copy; 2025 Gabriel. Tous droits réservés.</p>
+            <p class="footer-subtitle">Développeur web passionné</p>
+            <p><button id="reset-theme" class="reset-theme">Réinitialiser le thème</button></p>
+        </div>
+    </div>
+</footer>
+
+<button class="scroll-to-top" id="scrollToTop">↑</button>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="script.js"></script>
+
+<script>
+const popup = document.getElementById("popup");
+const popupTitle = document.getElementById("popup-title");
+const popupContent = document.getElementById("popup-content");
+
+const offerTexts = {
+    vitrine: {
+        title: "Site Vitrine",
+        text: "Site moderne, rapide et professionnel, idéal pour présenter votre activité. Inclus : pages personnalisées, responsive, formulaire de contact, SEO de base."
+    },
+    refonte: {
+        title: "Refonte / Redesign",
+        text: "Analyse complète du site existant, création d'un nouveau design moderne, optimisation des performances & migration sécurisée."
+    },
+    complet: {
+        title: "Site Complet & Base de Données",
+        text: "Site dynamique avec back-end sécurisé, base SQL, espace membre, connexion, panel administrateur, API personnalisée."
+    },
+    maintenance: {
+        title: "Maintenance & Support",
+        text: "Surveillance, mises à jour, sauvegardes, sécurité, support technique en continu."
+    },
+    seo: {
+        title: "Optimisation & Analytics",
+        text: "Optimisation SEO, analyse du trafic, rapports détaillés, recommandations basées sur les données."
+    }
+};
+
+document.querySelectorAll(".service-price").forEach(btn => {
+    btn.addEventListener("click", () => {
+        const k = btn.dataset.offer;
+        popupTitle.innerText = offerTexts[k].title;
+        popupContent.innerText = offerTexts[k].text;
+        popup.classList.add("visible");
+    });
+});
+
+function closePopup() {
+    popup.classList.remove("visible");
+}
+</script>
+
 </body>
 </html>

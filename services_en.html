@@ -4,37 +4,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script>
-        (function(){
-            try{
-                var t = localStorage.getItem('theme');
-                if (t === 'dark' || t === 'true' || t === '1') {
-                    document.documentElement.setAttribute('data-theme','dark');
-                } else {
-                    document.documentElement.removeAttribute('data-theme');
-                }
-            } catch(e){}
-        })();
-    </script>
-    <link rel="stylesheet" href="style.css">
+  <script>
+      (function(){
+          try{
+              var t = localStorage.getItem('theme');
+              if (t === 'dark' || t === 'true' || t === '1') {
+                  document.documentElement.setAttribute('data-theme','dark');
+              } else {
+                  document.documentElement.removeAttribute('data-theme');
+              }
+          } catch(e){}
+      })();
+  </script>
+
+  <link rel="stylesheet" href="style.css">
   <title>My Services - Gabriel</title>
 </head>
 
 <body>
-    
+
+    <!-- BACKGROUND PARTICLES -->
     <div class="particles-container">
-        <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
-        <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
-        <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
-        <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
-        <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
-        <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+        <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+        <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+        <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+        <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+        <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+        <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+        <div class="particle"></div><div class="particle"></div><div class="particle"></div>
         <div class="particle"></div><div class="particle"></div>
     </div>
 
     <div id="contenu-principal">
+
+        <!-- PROMO BANNER -->
+        <div class="promo-under-header">
+            🎉 First clients offer: you only pay for the domain name + hosting!
+        </div>
+
+        <!-- HEADER -->
         <header>
             <h1 class="logo">Gabriel</h1>
+
             <div class="header-center">
                 <div class="menu-deroulant">
                     <button class="btn-sommaire">Menu ▾</button>
@@ -50,40 +61,47 @@
                     </nav>
                 </div>
             </div>
+
             <div class="header-right">
                 <a class="download-cv" href="lm 15.pdf" target="_blank">Download CV</a>
+
                 <div style="display:flex; align-items:center; gap:12px;">
-                  <a href="services.html" class="lang-link" style="color:var(--text-color); font-weight:600;">FR</a>
-                  <label class="switch">
-                      <input type="checkbox" id="theme-switch">
-                      <span class="slider"></span>
-                  </label>
+                    <a href="services.html" class="lang-link" style="color:var(--text-color); font-weight:600;">FR</a>
+
+                    <label class="switch">
+                        <input type="checkbox" id="theme-switch">
+                        <span class="slider"></span>
+                    </label>
                 </div>
             </div>
         </header>
 
+        <!-- MAIN CONTENT -->
         <main>
+
             <section class="section">
                 <h2>My Services 🚀</h2>
                 <p style="margin-bottom: 30px; font-size: 1.1rem; opacity: 0.9;">
-                    I build modern, responsive and custom websites tailored to your needs.
+                    I create modern, responsive and tailored websites adapted to your needs.
                 </p>
-                
+
                 <div class="services-grid">
 
+                    <!-- SERVICE 1 -->
                     <div class="service-card">
                         <div class="service-icon">🌐</div>
                         <h3>Showcase Website</h3>
-                        <p>A clean, elegant site to present your activity.</p>
+                        <p>A clean, modern site to present your activity.</p>
                         <ul class="service-features">
                             <li>✓ Modern design</li>
                             <li>✓ Fully responsive</li>
                             <li>✓ Contact form</li>
                             <li>✓ Custom pages</li>
                         </ul>
-                        <div class="service-price">From €100</div>
+                        <div class="service-price price-btn" data-offer="0">From €100</div>
                     </div>
 
+                    <!-- SERVICE 2 -->
                     <div class="service-card">
                         <div class="service-icon">🎨</div>
                         <h3>Redesign</h3>
@@ -91,85 +109,95 @@
                         <ul class="service-features">
                             <li>✓ Website audit</li>
                             <li>✓ New design</li>
-                            <li>✓ Performance improvements</li>
+                            <li>✓ Optimization</li>
                             <li>✓ Safe migration</li>
                         </ul>
-                        <div class="service-price">From €150</div>
+                        <div class="service-price price-btn" data-offer="1">From €150</div>
                     </div>
 
+                    <!-- SERVICE 3 -->
                     <div class="service-card">
                         <div class="service-icon">🗄️</div>
                         <h3>Full Website & Database</h3>
                         <p>A dynamic, secure and fully functional website with admin panel.</p>
                         <ul class="service-features">
-                            <li>✓ Secure back-end</li>
+                            <li>✓ Secure backend</li>
                             <li>✓ SQL database</li>
-                            <li>✓ User authentication</li>
+                            <li>✓ Authentication system</li>
                             <li>✓ Admin dashboard</li>
                             <li>✓ Custom API</li>
                         </ul>
-                        <div class="service-price">From €300</div>
+                        <div class="service-price price-btn" data-offer="2">From €300</div>
                     </div>
 
+                    <!-- SERVICE 4 -->
                     <div class="service-card">
                         <div class="service-icon">🔧</div>
                         <h3>Maintenance & Support</h3>
-                        <p>Keep your website fast, secure and up to date.</p>
+                        <p>Keep your website fast, secure and up-to-date.</p>
                         <ul class="service-features">
                             <li>✓ Updates</li>
                             <li>✓ Backups</li>
                             <li>✓ Technical support</li>
                             <li>✓ Monitoring</li>
                         </ul>
-                        <div class="service-price">From €25/month</div>
+                        <div class="service-price price-btn" data-offer="3">From €25/month</div>
                     </div>
 
+                    <!-- SERVICE 5 -->
                     <div class="service-card">
                         <div class="service-icon">📊</div>
                         <h3>Optimization & Analytics</h3>
-                        <p>Improve performance and visibility.</p>
+                        <p>Improve speed, SEO and visibility.</p>
                         <ul class="service-features">
                             <li>✓ SEO</li>
                             <li>✓ Traffic analysis</li>
-                            <li>✓ Reports</li>
-                            <li>✓ Strategic recommendations</li>
+                            <li>✓ Detailed reports</li>
+                            <li>✓ Recommendations</li>
                         </ul>
-                        <div class="service-price">From €300</div>
+                        <div class="service-price price-btn" data-offer="4">From €300</div>
                     </div>
 
                 </div>
             </section>
 
+            <!-- CLIENTS -->
             <section class="section">
                 <h2>Happy Clients 👥</h2>
-                    <div class="client-card">
-                        <div class="client-logo">🧀</div>
-                        <h3>Goût et Fraîcheur</h3>
-                        <p class="client-description">Cheese shop</p>
-                        <p class="client-feedback">"Very professional work and excellent follow-up."</p>
-                        <div class="client-rating">⭐⭐⭐⭐</div>
-                    </div>
+
+                <div class="client-card">
+                    <div class="client-logo">🧀</div>
+                    <h3>Goût et Fraîcheur</h3>
+                    <p class="client-description">Cheese Shop</p>
+                    <p class="client-feedback">"Very professional work and great follow-up."</p>
+                    <div class="client-rating">⭐⭐⭐⭐</div>
+                </div>
             </section>
 
+            <!-- QUOTE -->
             <div class="quote-section">
                 <div class="animated-quote">
                     <span class="quote-text">"Your online success starts here"</span>
                 </div>
             </div>
 
+            <!-- CONTACT -->
             <section class="section">
                 <h2>Start Your Project 📬</h2>
-                <p style="margin-bottom: 30px; text-align: center; opacity: 0.9;">Contact me for a custom quote.</p>
-                
+                <p style="margin-bottom: 30px; text-align: center; opacity: 0.9;">Contact me for a personalized quote.</p>
+
                 <form id="contact-form" class="contact-form">
+
                     <div class="form-group">
                         <input type="text" id="name" name="name" placeholder="Your name" required>
                     </div>
+
                     <div class="form-group">
                         <input type="email" id="email" name="email" placeholder="Your email" required>
                     </div>
+
                     <div class="form-group">
-                        <select id="service" name="service" required style="width: 100%; padding: 16px 20px; border-radius: 12px;">
+                        <select id="service" name="service" required>
                             <option value="">Select a service</option>
                             <option value="site-vitrine">Showcase Website</option>
                             <option value="site-complet">Full Website & Database</option>
@@ -178,26 +206,40 @@
                             <option value="optimisation">Optimization & Analytics</option>
                         </select>
                     </div>
+
                     <div class="form-group">
                         <textarea id="message" name="message" placeholder="Describe your project" required></textarea>
                     </div>
+
                     <div class="form-group">
                         <button type="submit" class="submit-btn">Request a Quote</button>
                     </div>
+
                 </form>
 
                 <p id="status"></p>
             </section>
+
         </main>
     </div>
 
-    
+    <!-- POPUP (same as FR version) -->
+    <div class="popup-overlay" id="popup">
+        <div class="popup-card">
+            <button class="popup-close" onclick="closePopup()">✕</button>
+            <p id="popup-content"></p>
+        </div>
+    </div>
+
+
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-content">
             <div class="social-links">
                 <a href="https://linkedin.com/in/gabriel-durand-touya-182ab3349/">LinkedIn</a>
                 <a href="https://github.com/gabrieldrdt">GitHub</a>
             </div>
+
             <div class="footer-text">
                 <p>&copy; 2025 Gabriel. All rights reserved.</p>
                 <p class="footer-subtitle">Passionate Web Developer</p>
@@ -209,5 +251,31 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="script.js"></script>
+
+    <script>
+        const offerTexts = [
+            "A complete showcase website with responsive design, contact form and custom pages. Perfect for businesses and personal brands.",
+            "A full redesign of your website with a modern interface, performance upgrades and a secure migration.",
+            "A full-featured website including a secure backend, database, authentication system and admin dashboard.",
+            "Maintenance plan including updates, backups, monitoring and technical support.",
+            "Optimization service including SEO improvements, analytics setup, insights and recommendations."
+        ];
+
+        const popup = document.getElementById("popup");
+        const popupContent = document.getElementById("popup-content");
+
+        document.querySelectorAll(".price-btn").forEach(btn => {
+            btn.addEventListener("click", function () {
+                const index = this.dataset.offer;
+                popupContent.textContent = offerTexts[index];
+                popup.classList.add("visible");
+            });
+        });
+
+        function closePopup() {
+            popup.classList.remove("visible");
+        }
+    </script>
+
 </body>
 </html>
