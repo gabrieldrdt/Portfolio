@@ -229,9 +229,10 @@
         <h3 id="popup-title"></h3>
         <p id="popup-content"></p>
 
-        <button onclick="scrollToContact()" class="submit-btn" style="width:100%; margin-top:15px;">
-            Commencer ce projet
+        <button type="button" class="submit-btn" style="width:100%; margin-top:15px;" onclick="scrollToContact()">
+        Commencer ce projet
         </button>
+
     </div>
 </div>
 
@@ -262,23 +263,54 @@ const popupContent = document.getElementById("popup-content");
 const offerTexts = {
     vitrine: {
         title: "Site Vitrine",
-        text: "Un site moderne et professionnel pour présenter votre activité. Idéal pour entrepreneurs, commerces, artisans, associations ou projets personnels.\n\n✔ Pages personnalisées\n✔ Responsive (mobile + PC)\n✔ Formulaire de contact intégré\n✔ Optimisation SEO de base\n✔ Design moderne et épuré\n\n💡 Parfait pour faire bonne impression rapidement."
+        text: "Un site moderne et professionnel pour présenter votre activité.\n\n" +
+              "✔ Pages personnalisées\n" +
+              "✔ Responsive (mobile + PC)\n" +
+              "✔ Formulaire de contact intégré\n" +
+              "✔ Optimisation SEO de base\n" +
+              "✔ Design moderne et épuré\n\n" +
+              "💡 Parfait pour entrepreneurs, commerces, artisans, associations."
     },
     refonte: {
         title: "Refonte / Redesign",
-        text: "Modernisez un site daté et augmentez sa crédibilité.\n\n✔ Audit complet du site actuel\n✔ Nouveau design moderne\n✔ Amélioration UX / UI\n✔ Optimisation des performances\n✔ Migration sécurisée\n\n💡 Pour tous ceux qui veulent un site plus pro et plus efficace."
+        text: "Modernisez votre site pour augmenter votre crédibilité.\n\n" +
+              "✔ Audit du site actuel\n" +
+              "✔ Nouveau design moderne\n" +
+              "✔ Amélioration UX / UI\n" +
+              "✔ Optimisation des performances\n" +
+              "✔ Migration sécurisée\n\n" +
+              "💡 Idéal si votre site semble daté ou peu professionnel."
     },
     complet: {
         title: "Site Complet & Base de Données",
-        text: "Un site dynamique complet avec gestion des utilisateurs et outils avancés.\n\n✔ Back-end sécurisé\n✔ Base SQL\n✔ Espace membre + connexion\n✔ Panel administrateur\n✔ API personnalisée\n✔ Architecture scalable\n\n💡 Parfait pour plateformes, sites professionnels, outils internes, dashboards."
+        text: "Un site dynamique complet avec gestion des utilisateurs.\n\n" +
+              "✔ Back-end sécurisé\n" +
+              "✔ Base SQL\n" +
+              "✔ Connexion + espace membre\n" +
+              "✔ Panel administrateur\n" +
+              "✔ API personnalisée\n" +
+              "✔ Architecture scalable\n\n" +
+              "💡 Pour plateformes, outils internes, dashboards, sites professionnels."
     },
     maintenance: {
         title: "Maintenance & Support",
-        text: "Je m'occupe de tout pour garder votre site sécurisé et fonctionnel.\n\n✔ Mises à jour\n✔ Sauvegardes régulières\n✔ Support technique\n✔ Patchs de sécurité\n✔ Monitoring 24/7\n\n💡 Idéal pour éviter les bugs, les pannes, et les risques de piratage."
+        text: "Votre site reste sécurisé et fonctionnel sans effort.\n\n" +
+              "✔ Mises à jour\n" +
+              "✔ Sauvegardes\n" +
+              "✔ Support technique\n" +
+              "✔ Patchs de sécurité\n" +
+              "✔ Monitoring\n\n" +
+              "💡 Indispensable pour éviter bugs, pannes et piratage."
     },
     seo: {
         title: "Optimisation & Analytics",
-        text: "Améliorez la visibilité et les performances de votre site.\n\n✔ Optimisation SEO\n✔ Analyse du trafic\n✔ Rapports détaillés\n✔ Conseils d'amélioration\n✔ Optimisation vitesse\n\n💡 Pour booster votre présence en ligne."
+        text: "Boostez la visibilité et les performances de votre site.\n\n" +
+              "✔ Optimisation SEO\n" +
+              "✔ Analyse du trafic\n" +
+              "✔ Rapports détaillés\n" +
+              "✔ Plan d'amélioration\n" +
+              "✔ Optimisation vitesse\n\n" +
+              "💡 Idéal pour augmenter votre audience."
     }
 };
 
@@ -286,7 +318,9 @@ document.querySelectorAll(".service-price").forEach(btn => {
     btn.addEventListener("click", () => {
         const k = btn.dataset.offer;
         popupTitle.innerText = offerTexts[k].title;
-        popupContent.innerText = offerTexts[k].text;
+
+        popupContent.innerHTML = offerTexts[k].text.replace(/\n/g, "<br>");
+
         popup.classList.add("visible");
     });
 });
@@ -297,17 +331,25 @@ function closePopup() {
 
 function scrollToContact() {
     const form = document.getElementById("contact-form");
-    const headerHeight = document.querySelector("header").offsetHeight;
 
-    window.scrollTo({
-        top: form.getBoundingClientRect().top + window.scrollY - (headerHeight + 20),
-        behavior: "smooth"
-    });
+    if (!form) return;
 
     closePopup();
-}
 
+    setTimeout(() => {
+        const header = document.querySelector("header");
+        const headerHeight = header ? header.offsetHeight : 0;
+
+        const y = form.getBoundingClientRect().top + window.scrollY - headerHeight - 15;
+
+        window.scrollTo({
+            top: y,
+            behavior: "smooth"
+        });
+    }, 150);
+}
 </script>
+
 
 </body>
 </html>

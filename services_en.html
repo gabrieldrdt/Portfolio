@@ -241,24 +241,55 @@ const popupContent = document.getElementById("popup-content");
 
 const offerTexts = {
     vitrine: {
-        title: "Showcase Website",
-        text: "A modern website designed to present your business in the best possible way.\n\n✔ Custom pages\n✔ Responsive (PC + mobile)\n✔ Contact form\n✔ Basic SEO\n✔ Clean and elegant design\n\n💡 Perfect for small businesses and freelancers."
+        title: "Site Vitrine",
+        text: "Un site moderne et professionnel pour présenter votre activité.\n\n" +
+              "✔ Pages personnalisées\n" +
+              "✔ Responsive (mobile + PC)\n" +
+              "✔ Formulaire de contact intégré\n" +
+              "✔ Optimisation SEO de base\n" +
+              "✔ Design moderne et épuré\n\n" +
+              "💡 Parfait pour entrepreneurs, commerces, artisans, associations."
     },
     refonte: {
-        title: "Redesign",
-        text: "Turn your outdated website into something modern and efficient.\n\n✔ Full audit\n✔ New modern design\n✔ Improved UX & UI\n✔ Performance boost\n✔ Safe migration\n\n💡 Great for businesses needing a more professional look."
+        title: "Refonte / Redesign",
+        text: "Modernisez votre site pour augmenter votre crédibilité.\n\n" +
+              "✔ Audit du site actuel\n" +
+              "✔ Nouveau design moderne\n" +
+              "✔ Amélioration UX / UI\n" +
+              "✔ Optimisation des performances\n" +
+              "✔ Migration sécurisée\n\n" +
+              "💡 Idéal si votre site semble daté ou peu professionnel."
     },
     complet: {
-        title: "Full Website & Database",
-        text: "A complete dynamic website with secure data handling.\n\n✔ Secure back-end\n✔ SQL database\n✔ User accounts + login system\n✔ Admin panel\n✔ Custom API\n\n💡 Ideal for advanced platforms and business systems."
+        title: "Site Complet & Base de Données",
+        text: "Un site dynamique complet avec gestion des utilisateurs.\n\n" +
+              "✔ Back-end sécurisé\n" +
+              "✔ Base SQL\n" +
+              "✔ Connexion + espace membre\n" +
+              "✔ Panel administrateur\n" +
+              "✔ API personnalisée\n" +
+              "✔ Architecture scalable\n\n" +
+              "💡 Pour plateformes, outils internes, dashboards, sites professionnels."
     },
     maintenance: {
         title: "Maintenance & Support",
-        text: "I keep your website secure and updated so you don’t have to worry.\n\n✔ Regular updates\n✔ Backups\n✔ Security patches\n✔ Monitoring\n✔ Technical support\n\n💡 Prevent issues before they happen."
+        text: "Votre site reste sécurisé et fonctionnel sans effort.\n\n" +
+              "✔ Mises à jour\n" +
+              "✔ Sauvegardes\n" +
+              "✔ Support technique\n" +
+              "✔ Patchs de sécurité\n" +
+              "✔ Monitoring\n\n" +
+              "💡 Indispensable pour éviter bugs, pannes et piratage."
     },
     seo: {
-        title: "Optimization & Analytics",
-        text: "Improve your online visibility and website performance.\n\n✔ SEO optimization\n✔ Traffic analysis\n✔ Speed improvements\n✔ Data-based recommendations\n✔ Detailed reports\n\n💡 Perfect if you want more visitors or conversions."
+        title: "Optimisation & Analytics",
+        text: "Boostez la visibilité et les performances de votre site.\n\n" +
+              "✔ Optimisation SEO\n" +
+              "✔ Analyse du trafic\n" +
+              "✔ Rapports détaillés\n" +
+              "✔ Plan d'amélioration\n" +
+              "✔ Optimisation vitesse\n\n" +
+              "💡 Idéal pour augmenter votre audience."
     }
 };
 
@@ -266,7 +297,9 @@ document.querySelectorAll(".service-price").forEach(btn => {
     btn.addEventListener("click", () => {
         const k = btn.dataset.offer;
         popupTitle.innerText = offerTexts[k].title;
-        popupContent.innerText = offerTexts[k].text;
+
+        popupContent.innerHTML = offerTexts[k].text.replace(/\n/g, "<br>");
+
         popup.classList.add("visible");
     });
 });
@@ -277,16 +310,23 @@ function closePopup() {
 
 function scrollToContact() {
     const form = document.getElementById("contact-form");
-    const headerHeight = document.querySelector("header").offsetHeight;
 
-    window.scrollTo({
-        top: form.getBoundingClientRect().top + window.scrollY - (headerHeight + 20),
-        behavior: "smooth"
-    });
+    if (!form) return;
 
     closePopup();
-}
 
+    setTimeout(() => {
+        const header = document.querySelector("header");
+        const headerHeight = header ? header.offsetHeight : 0;
+
+        const y = form.getBoundingClientRect().top + window.scrollY - headerHeight - 15;
+
+        window.scrollTo({
+            top: y,
+            behavior: "smooth"
+        });
+    }, 150);
+}
 </script>
 
 </body>
